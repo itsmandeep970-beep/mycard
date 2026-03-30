@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Instagram Card</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#060303;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* CARD */
+.main{
+    width:400px;
+    padding:20px;
+    border-radius:20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.2);
+    color:white;
+    text-align:center;
+    position:relative;
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+    transition:0.3s;
+}
+
+
+
+/* Glow */
+.main::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    background:linear-gradient(45deg,#00f2ff,#ff00c8);
+    filter:blur(25px);
+    opacity:0.3;
+    z-index:-1;
+}
+
+/* DP */
+.dper{
+    border-radius:50%;
+    border:4px solid #aa57d1;
+    padding:2px;
+    width:fit-content;
+    float: left;
+    margin:0 auto 10px;
+}
+
+.dp{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display: block;
+}
+
+/* Username */
+.name h3{
+    margin:5px 0;
+}
+
+/* Stats */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    margin:15px 0;
+}
+
+.stats div{
+    font-size:14px;
+}
+
+/* Bio */
+.bio{
+    float: left;
+    display: block;
+    margin-top: 4%;
+    position: absolute;
+    font-size:14px;
+    line-height:1.4;
+}
+
+/* QR */
+.qr{
+    margin-top:0px;
+    float: right;
+}
+
+.qr img{
+    width:100px;
+}
+
+/* Buttons */
+.buttons{
+    position: relative;
+    display: block;
+    align-items: center;
+    margin-top:118px;
+}
+
+button{
+    flex:1;
+    margin:5px;
+    padding:10px;
+    border: 1px solid #00c9f1;
+    border-radius:50px;
+    width: 140px;
+    background:rgba(255,255,255,0.2);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- DP -->
+    <div class="dper">
+        <img src="Dp.jpg" class="dp">
+    </div>
+
+    <!-- Username -->
+    <div class="name">
+        <h3>its.mandeep114 ⚙️</h3>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div><b>59</b><br>Posts</div>
+        <div><b>866</b><br>Followers</div>
+        <div><b>301</b><br>Following</div>
+    </div>
+
+    <!-- Bio -->
+    <div class="bio">
+        I am not a king 👑 <br>
+        but <br>
+        I have <br>
+        A rich attitude 😏
+    </div>
+
+    <!-- QR -->
+    <div class="qr">
+        <img src="qr.png">
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button>Follow</button>
+        <button>Message</button>
+    </div>
+
+</div>
+
+</body>
+</html>
